@@ -20,8 +20,8 @@ jobs:
        username: ${{vars.DOCKERHUBUSERNAME}}
        password: ${{secrets.DOCKERHUBPASSWORD}}
     - name: Docker Build
-      run: docker build -t github-actions-demo .
+      run: docker build -t githubactionsrepo .
     - name: Docker Tag
-      run: docker tag github-actions-demo avantika94/github-actions-demo
+      run: docker tag githubactionsrepo avantika94/githubactionsrepo
     - name: Docker Push
-      run: docker push avantika94/github-actions-demo
+      run: docker push avantika94/githubactionsrepo
